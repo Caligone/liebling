@@ -16,10 +16,6 @@
     &:before {
       @include bs(var(--article-shadow-hover));
     }
-
-    .m-article-card__author {
-      @include bs(0 4px 8px rgba(0, 0, 0, 0.3));
-    }
   }
 
   @include respond-to('medium') {
@@ -49,28 +45,6 @@
     .m-article-card__title {
       line-height: 1.4;
       font-size: 1.625rem;
-    }
-  }
-
-  &.as-author {
-    .m-article-card__picture {
-      background-color: $black;
-    }
-
-    .m-article-card__picture-link {
-      z-index: 2;
-    }
-
-    .m-article-card__picture-background {
-      opacity: 0.75;
-    }
-
-    .m-article-card__info {
-      padding: 0;
-    }
-
-    .m-article-card__info-link {
-      padding: $mobile-space $mobile-space 60px $mobile-space;
     }
   }
 
@@ -135,33 +109,6 @@
   @include respond-to('medium') {
     left: 25px;
     bottom: 25px;
-  }
-}
-
-.m-article-card__author {
-  position: absolute;
-  top: $mobile-space;
-  left: $mobile-space;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  z-index: 2;
-  @include transition(all .25s cubic-bezier(.02,.01,.47,1));
-
-  @include respond-to('medium') {
-    top: 25px;
-    left: 25px;
-  }
-
-  div {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 2px solid $white;
-    background-color: $white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 }
 
@@ -266,8 +213,7 @@
   font-size: 1rem;
 }
 
-.m-article-card__timestamp,
-.m-article-card__author-stats {
+.m-article-card__timestamp {
   display: flex;
   align-items: center;
   color: var(--titles-color);
@@ -276,17 +222,6 @@
 
   span:nth-child(2) {
     padding: 0 10px;
-  }
-}
-
-.m-article-card__author-stats {
-  position: absolute;
-  left: $mobile-space;
-  right: $mobile-space;
-  bottom: $mobile-space;
-  justify-content: space-between;
-  span {
-    padding: 0 !important;
   }
 }
 

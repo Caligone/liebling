@@ -5,12 +5,6 @@
   background-color: var(--primary-subtle-color);
   z-index: 1;
 
-  &:hover {
-    .m-featured-article__author {
-      @include bs(0 4px 8px rgba(0, 0, 0, 0.3));
-    }
-  }
-
   &.no-picture {
     .m-featured-article__picture {
       background-color: var(--primary-subtle-color);
@@ -58,26 +52,6 @@
       left: auto;
       right: 40px;
     }
-  }
-}
-
-.m-featured-article__author {
-  display: block;
-  width: 35px;
-  height: 35px;
-  background-color: $white;
-  border: 2px solid $white;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  @include transition(all .25s cubic-bezier(.02,.01,.47,1));
-
-  div {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
   }
 }
 
