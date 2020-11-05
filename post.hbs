@@ -44,7 +44,9 @@ into the {body} of the default.hbs template --}}
                   <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
                 {{/if}}
-                <span class="m-heading__meta__time">{{date published_at}}</span>
+                <span>{{date published_at timeago="true"}}</span>
+                <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
               </div>
             </header>
             <div class="pos-relative js-post-content">
